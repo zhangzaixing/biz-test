@@ -1,13 +1,12 @@
 package banana.biz_test;
 
-/**
- * Hello world!
- *
- */
+import com.appleframework.config.core.PropertyConfigurer;
+
+
 public class App 
 {
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
-    }
+	public Integer getConfig() {
+		Integer result = PropertyConfigurer.getInteger("biz.test.config");
+		return result;
+	}
 }
